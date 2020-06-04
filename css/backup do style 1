@@ -51,25 +51,26 @@ div , a{
 	margin-left: 5%;
 	border: none;
 }
+
+.money {
+	margin-left: 25%;
+}
+
 .sub-header{
-	display: flex;
-	text-align: center;
-	align-items: center;
+    display: flex;
     width: 100%;
     height: 50px;
     background-color: #f1f1f1;
 }
 
 .item{
-	flex: 1;
-	padding: 4% 0% 4% 0%;
+    flex: 1;
+    border: none;
 }
 
 .sub-header-graph{
 	display: none;
-	text-align: center;
-	align-items: center;
-    width: 100%;
+	width: 100%;
     height: 50px;
     background-color: #f1f1f1;
 }

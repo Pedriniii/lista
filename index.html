@@ -8,29 +8,28 @@
 </head>
 <body>
     <div id="mySideBar">
-        <a onclick="w3_close()" class="option-side">Fechar</a>
         <a onclick="inicio()" class="option-side">Inicio</a>
-        <a href="#" class="option-side" onclick="graphics()">Gráfico de rendimento</a>
-        <a href="#" class="option-side">Pagar</a>
-        <a href="#" class="option-side">Receber</a>
+        <a class="option-side" onclick="graphics()">Gráfico de rendimento</a>
+        <a class="option-side">Pagar</a>
+        <a class="option-side">Receber</a>
     </div>
     <header class="navbar nav-align">   
-        <button class="sidebar" id="side-button" onclick="sideButton_open()">☰</button>
-        <h2 class="money">10,63$</h2>
+        <a class="sidebar" id="side-button" onclick="sideButton_open()">☰</a>
+        <h2>10,63$</h2>
     </header>
     <div class="sub-header" id="paymants">
-        <button class="item">Todos</button>
-        <button class="item">Pagamentos</button>
-        <button class="item">Recebimentos</button>
+        <a class="item" id="todos" onclick="todosElement()">Todos</a>
+        <a class="item" id="pagos" onclick="pagosElement()">Pagamentos</a>
+        <a class="item" id="recebidos" onclick="recebidosElement()">Recebimentos</a>
     </div>
     <div class="sub-header-graph" id="graph">
-        <button class="item">Graph 1</button>
-        <button class="item">Graph 2</button>
-        <button class="item">Graph 3</button>
+        <a class="item" id="graph1" onclick="graphElement1()">Graph 1</a>
+        <a class="item" id="graph2" onclick="graphElement2()">Graph 2</a>
+        <a class="item" id="graph3" onclick="graphElement3()">Graph 3</a>
     </div>
     
 
     <script src="js\side-bar.js"></script>
-    <script src="js\graph-bar.js"></script>
+    <script src="js\sub-side.js"></script>
 </body>
 </html>
