@@ -75,3 +75,11 @@ a{
     height: 50px;
     background-color: #f1f1f1;
 }
+
+@media only screen and (min-width: 600px) {
+	.item{
+		flex: 1;
+		padding: 1% 0% 1% 0%;
+	}
+
+  }
