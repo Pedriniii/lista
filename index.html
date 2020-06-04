@@ -8,22 +8,29 @@
 </head>
 <body>
     <div id="mySideBar">
-        <button onclick="w3_close()" class="option-side option-side-btn">Fechar</button>
+        <a onclick="w3_close()" class="option-side">Fechar</a>
+        <a onclick="inicio()" class="option-side">Inicio</a>
+        <a href="#" class="option-side" onclick="graphics()">Gráfico de rendimento</a>
         <a href="#" class="option-side">Pagar</a>
         <a href="#" class="option-side">Receber</a>
-        <a href="#" class="option-side">Gráfico de rendimento</a>
     </div>
-    <header class="navbar">   
+    <header class="navbar nav-align">   
         <button class="sidebar" id="side-button" onclick="sideButton_open()">☰</button>
         <h2 class="money">10,63$</h2>
     </header>
-    <div class="sub-header">
+    <div class="sub-header" id="paymants">
         <button class="item">Todos</button>
         <button class="item">Pagamentos</button>
         <button class="item">Recebimentos</button>
     </div>
+    <div class="sub-header-graph" id="graph">
+        <button class="item">Graph 1</button>
+        <button class="item">Graph 2</button>
+        <button class="item">Graph 3</button>
+    </div>
     
 
     <script src="js\side-bar.js"></script>
+    <script src="js\graph-bar.js"></script>
 </body>
 </html>
