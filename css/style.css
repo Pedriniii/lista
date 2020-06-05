@@ -9,12 +9,12 @@ body{
 }
 
 a{
-    text-decoration: none!important;
+    text-decoration: none;
 }
 
 .navbar{
 	display: grid;
-	grid-template-areas: "a money";
+	grid-template-columns: 0fr 1fr;
 	background-color: #202020;
 	color: #FFF;
 	width: 100%;
@@ -22,7 +22,7 @@ a{
 	align-items: center;
 }
 .nav-align :not(.sidebar){
-	justify-content: center;
+	justify-self: center;
 }
 #mySideBar {
 	display: none;
@@ -96,20 +96,20 @@ a{
 .container{
 	display: grid;
 	grid-template-columns: 1fr;
-	align-content: center;
 }
-ul li{
-	display: grid;
-	justify-items: center;
-	list-style: none;
-	padding: 15px 0px 5px 0px;
-}
+
 .registro{
 	width: 80%;
-	height: 100px;
-	background-color: #FFF;
-	border-radius: 8px;
-	padding-bottom: 10px;
+    height: 100px;
+    background-color: #FFF;
+    border-radius: 8px;
+    justify-self: center;
+    margin-top: 20px;
+}
+
+.content{
+	display: grid;
+    grid-template-columns: 2fr 1fr;
 }
 
 
