@@ -1,3 +1,12 @@
+document.getElementById("todos").style.color = "#0000FF"
+document.getElementById("todos").style.borderBottom = "solid #0000FF"
+// 
+document.getElementById("graph1").style.color = "#0000FF"
+document.getElementById("graph1").style.borderBottom = "solid #0000FF"
+
+
+
+
 var navigationElement = document.querySelectorAll("a.item")
 navigationElement.forEach((data) => {
     data.onclick = (info) =>{
