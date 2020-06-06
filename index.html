@@ -20,19 +20,19 @@
             <h2>10,63$</h2>
     </header>
     <div class="sub-header" id="paymants">
-        <a class="item" id="todos" onclick="todosElement()">Todos</a>
-        <a class="item" id="pagos" onclick="pagosElement()">Pagamentos</a>
-        <a class="item" id="recebidos" onclick="recebidosElement()">Recebimentos</a>
+        <a class="item" id="todos" data-id="todos">Todos</a>
+        <a class="item" id="pagos" data-id="pagos">Pagamentos</a>
+        <a class="item" id="recebidos" data-id="recebidos">Recebimentos</a>
     </div>
     <div class="sub-header-graph" id="graph">
-        <a class="item" id="graph1" onclick="graphElement1()">Graph 1</a>
-        <a class="item" id="graph2" onclick="graphElement2()">Graph 2</a>
-        <a class="item" id="graph3" onclick="graphElement3()">Graph 3</a>
+        <a class="item" id="graph1" data-id="graph1">Graph 1</a>
+        <a class="item" id="graph2" data-id="graph2">Graph 2</a>
+        <a class="item" id="graph3" data-id="graph3">Graph 3</a>
     </div>
     <!-- corpo -->
     <div class="container">
        <!-- modelo de relatorio -->
-                <div class="registro content" id="negativo">
+                <div class="registro content negativo" id="negativo">
                     <a style="    font-size: 18px;
                     text-align: center;
                     align-self: center;
@@ -53,7 +53,7 @@
                     color: #ff0000;">-546,00$</p>
                 </div>
            
-                <div class="registro content" id="positivo">
+                <div class="registro content positivo" id="positivo">
                     <a style="    font-size: 18px;
                     text-align: center;
                     align-self: center;
@@ -74,7 +74,7 @@
                     color: #38c700;">+1,00$</p>
                 </div>
           
-                <div class="registro content" id="negativo">
+                <div class="registro content negativo" id="negativo">
                     <a style="    font-size: 18px;
                     text-align: center;
                     align-self: center;
@@ -95,7 +95,7 @@
                     color: #ff0000;">-30,00$</p>
                 </div>
 
-                <div class="registro content" id="positivo">
+                <div class="registro content positivo" id="positivo">
                     <a style="    font-size: 18px;
                     text-align: center;
                     align-self: center;
