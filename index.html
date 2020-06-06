@@ -7,6 +7,7 @@
     <title>Lista</title>
 </head>
 <body>
+    <div id="overlay" onclick="off()"></div>
     <div id="mySideBar">
         <h3>Menu</h3>
         <a onclick="inicio()" class="option-side">Inicio</a>
@@ -30,8 +31,8 @@
     </div>
     <!-- corpo -->
     <div class="container">
-       
-                <div class="registro content" id="reg1">
+       <!-- modelo de relatorio -->
+                <div class="registro content" id="negativo">
                     <a style="    font-size: 18px;
                     text-align: center;
                     align-self: center;
@@ -52,7 +53,7 @@
                     color: #ff0000;">-546,00$</p>
                 </div>
            
-                <div class="registro content" id="reg2">
+                <div class="registro content" id="positivo">
                     <a style="    font-size: 18px;
                     text-align: center;
                     align-self: center;
@@ -73,7 +74,7 @@
                     color: #38c700;">+1,00$</p>
                 </div>
           
-                <div class="registro content" id="reg3">
+                <div class="registro content" id="negativo">
                     <a style="    font-size: 18px;
                     text-align: center;
                     align-self: center;
@@ -93,10 +94,32 @@
                     font-weight: bold;
                     color: #ff0000;">-30,00$</p>
                 </div>
+
+                <div class="registro content" id="positivo">
+                    <a style="    font-size: 18px;
+                    text-align: center;
+                    align-self: center;
+                    text-decoration: underline;
+                    color: #38c700;">Ticket de alimentação</a> 
+                    
+                    <a style="font-size: 10px;
+                    text-align: center;
+                    align-self: center;
+                    text-decoration: underline;
+                    color: #38c700;">24/04/2020</a>
+
+
+                    <p style="text-align: center;
+                    align-self: center;
+                    font-size: 25px;
+                    font-weight: bold;
+                    color: #38c700;">+200,00$</p>
+                </div>
             
     </div>
 
-    <script src="js\side-bar.js"></script>
-    <script src="js\sub-side.js"></script>
+    <script src="src\app.js"></script>
+    <script src="src\js\side-bar.js"></script>
+    <script src="src\js\sub-side.js"></script>
 </body>
 </html>
