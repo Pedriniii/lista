@@ -1,3 +1,9 @@
+import { graphics, inicio, pagar, receber } from './modules/path.js'
+const funcGraphics = graphics
+const funcInicio = inicio
+const funcPagar = pagar
+const funcReceber = receber
+
 document.getElementById("todos").style.color = "#0000FF"
 document.getElementById("todos").style.borderBottom = "solid #0000FF"
 // 
@@ -14,11 +20,18 @@ navigationElement.forEach((data) => {
         let colorSetTodos  = document.querySelector('#todos')      
         let colorSetPagos = document.querySelector('#pagos')
         let colorSetrecebidos = document.querySelector('#recebidos')
-        let colorSetGraph1
-        let colorSetGraph2
-        let colorSetGraph3
+        let colorSetGraph1 = document.querySelector('#graph1')
+        let colorSetGraph2 = document.querySelector('#graph2')
+        let colorSetGraph3 = document.querySelector('#graph3')
+        let colorSetPagar = document.querySelector('#pagar') 
+        let colorSetAgendar = document.querySelector('#agendar-pagamento')
+        let colorSetSimular = document.querySelector('#simulacao')
+        let colorSetReceber = document.querySelector('#receber')
+        let colorSetAgendarP = document.querySelector('#agendar-receber')
+        let colorSetSimularP = document.querySelector('#simulacao-receber')
+        let statePositivo = document.querySelectorAll('div.positivo')        
         let stateNegativo = document.querySelectorAll('div.negativo')
-        let statePositivo = document.querySelectorAll('div.positivo')
+
         switch(id){
             case 'todos':
                 //exemplo de como deve mostrar o diplay(tem que limpar esse cod lixo)
@@ -59,115 +72,102 @@ navigationElement.forEach((data) => {
                 break
             case 'graph1':
                 stateNegativo[0].style.display = "none"
-                statePositivo[0].style.display = "none"
                 stateNegativo[1].style.display = "none"
+                statePositivo[0].style.display = "none"
                 statePositivo[1].style.display = "none"
+                colorSetGraph1.style.color = "#0000FF"
+                colorSetGraph1.style.borderBottom = "solid #0000FF"
+                colorSetGraph2.style.removeProperty('color')
+                colorSetGraph2.style.removeProperty('border-bottom')
+                colorSetGraph3.style.removeProperty('color')
+                colorSetGraph3.style.removeProperty('border-bottom')
                 break
             case 'graph2':
                 stateNegativo[0].style.display = "none"
-                statePositivo[0].style.display = "none"
                 stateNegativo[1].style.display = "none"
+                statePositivo[0].style.display = "none"
                 statePositivo[1].style.display = "none"
+                colorSetGraph1.style.removeProperty('color')
+                colorSetGraph1.style.removeProperty('border-bottom')
+                colorSetGraph2.style.color = "#0000FF"
+                colorSetGraph2.style.borderBottom = "solid #0000FF"
+                colorSetGraph3.style.removeProperty('color')
+                colorSetGraph3.style.removeProperty('border-bottom')
                 break
             case 'graph3':
                 stateNegativo[0].style.display = "none"
-                statePositivo[0].style.display = "none"
                 stateNegativo[1].style.display = "none"
+                statePositivo[0].style.display = "none"
                 statePositivo[1].style.display = "none"
+                colorSetGraph1.style.removeProperty('color')
+                colorSetGraph1.style.removeProperty('border-bottom')
+                colorSetGraph2.style.removeProperty('color')
+                colorSetGraph2.style.removeProperty('border-bottom')
+                colorSetGraph3.style.color = "#0000FF"
+                colorSetGraph3.style.borderBottom = "solid #0000FF"
                 break
+            case 'pagar':
+                colorSetPagar.style.color = "#0000FF"
+                colorSetPagar.style.borderBottom = "solid #0000FF"
+                colorSetAgendar.style.removeProperty('color')
+                colorSetAgendar.style.removeProperty('border-bottom')
+                colorSetSimular.style.removeProperty('color')
+                colorSetSimular.style.removeProperty('border-bottom')
+                break
+            case 'agendar-pagamento':
+                colorSetPagar.style.removeProperty('color')
+                colorSetPagar.style.removeProperty('border-bottom')
+                colorSetAgendar.style.color = "#0000FF"
+                colorSetAgendar.style.borderBottom = "solid #0000FF"
+                colorSetSimular.style.removeProperty('color')
+                colorSetSimular.style.removeProperty('border-bottom')
+                break
+            case 'simulacao':
+                colorSetPagar.style.removeProperty('color')
+                colorSetPagar.style.removeProperty('border-bottom')
+                colorSetAgendar.style.removeProperty('color')
+                colorSetAgendar.style.removeProperty('border-bottom')
+                colorSetSimular.style.color = "#0000FF"
+                colorSetSimular.style.borderBottom = "solid #0000FF"
+                break
+            case 'receber':
+                colorSetReceber.style.color = "#0000FF"
+                colorSetReceber.style.borderBottom = "solid #0000FF"
+                colorSetAgendarP.style.removeProperty('color')
+                colorSetAgendarP.style.removeProperty('border-bottom')
+                colorSetSimularP.style.removeProperty('color')
+                colorSetSimularP.style.removeProperty('border-bottom')
+
+                break
+            case 'agendar-receber':
+                colorSetReceber .style.removeProperty('color')
+                colorSetReceber .style.removeProperty('border-bottom')
+                colorSetAgendarP.style.color = "#0000FF"
+                colorSetAgendarP.style.borderBottom = "solid #0000FF"
+                colorSetSimularP.style.removeProperty('color')
+                colorSetSimularP.style.removeProperty('border-bottom')
+
+                break
+            case 'simulacao-receber':
+                colorSetReceber.style.removeProperty('color')
+                colorSetReceber.style.removeProperty('border-bottom')
+                colorSetAgendarP.style.removeProperty('color')
+                colorSetAgendarP.style.removeProperty('border-bottom')
+                colorSetSimularP.style.color = "#0000FF"
+                colorSetSimularP.style.borderBottom = "solid #0000FF"
+
+                break        
         }
     }
 })
 
 
+let btnInicio = document.querySelector('#inicio')
+let btnGraph = document.querySelector('#btn-graph')
+let btnPagar = document.querySelector('#btn-pagar')
+let btnReceber = document.querySelector('#btn-receber')
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// document.getElementById("todos").style.color = "#0000FF"
-// document.getElementById("todos").style.borderBottom = "solid #0000FF"
-// // 
-// document.getElementById("graph1").style.color = "#0000FF"
-// document.getElementById("graph1").style.borderBottom = "solid #0000FF"
-
-
-// function todosElement(){
-// document.getElementById("todos").style.color = "#0000FF"
-// document.getElementById("todos").style.borderBottom = "solid #0000FF"
-// document.getElementById("pagos").style.color = "#000000"
-// document.getElementById("pagos").style.borderBottom = "none"
-// document.getElementById("recebidos").style.color = "#000000"
-// document.getElementById("recebidos").style.borderBottom = "none"
-// document.getElementById("positivo").style.display = "grid"
-// document.getElementById("negativo").style.display = "grid"
-// }
-
-// function pagosElement(){
-// document.getElementById("todos").style.color = "#000000"
-// document.getElementById("todos").style.borderBottom = "none"
-// document.getElementById("pagos").style.color = "#0000FF"
-// document.getElementById("pagos").style.borderBottom = "solid #0000FF"
-// document.getElementById("recebidos").style.color = "#000000"
-// document.getElementById("recebidos").style.borderBottom = "none"
-// document.getElementById("positivo").style.display = "none"
-// document.getElementById("negativo").style.display = "grid"
-// }
-
-// function recebidosElement(){
-// document.getElementById("todos").style.color = "#000000"
-// document.getElementById("todos").style.borderBottom = "none"
-// document.getElementById("pagos").style.color = "#000000"
-// document.getElementById("pagos").style.borderBottom = "none"
-// document.getElementById("recebidos").style.color = "#0000FF"
-// document.getElementById("recebidos").style.borderBottom = "solid #0000FF"
-// document.getElementById("positivo").style.display = "grid"
-// document.getElementById("negativo").style.display = "none"
-// }
-
-// // FUNÇÕES PARA OS GRAFICOS (A FAZER AINDA)
-
-// function graphElement1(){
-// document.getElementById("graph1").style.color = "#0000FF"
-// document.getElementById("graph1").style.borderBottom = "solid #0000FF"
-// document.getElementById("graph2").style.color = "#000000"
-// document.getElementById("graph2").style.borderBottom = "none"
-// document.getElementById("graph3").style.color = "#000000"
-// document.getElementById("graph3").style.borderBottom = "none"
-// document.getElementById("positivo").style.display = "none"
-// document.getElementById("negativo").style.display = "none"
-// }
-
-// function graphElement2(){
-// document.getElementById("graph1").style.color = "#000000"
-// document.getElementById("graph1").style.borderBottom = "none"
-// document.getElementById("graph2").style.color = "#0000FF"
-// document.getElementById("graph2").style.borderBottom = "solid #0000FF"
-// document.getElementById("graph3").style.color = "#000000"
-// document.getElementById("graph3").style.borderBottom = "none"
-// document.getElementById("positivo").style.display = "none"
-// document.getElementById("negativo").style.display = "none"
-// }
-
-// function graphElement3(){
-// document.getElementById("graph1").style.color = "#000000"
-// document.getElementById("graph1").style.borderBottom = "none"
-// document.getElementById("graph2").style.color = "#000000"
-// document.getElementById("graph2").style.borderBottom = "none"
-// document.getElementById("graph3").style.color = "#0000FF"
-// document.getElementById("graph3").style.borderBottom = "solid #0000FF"
-// document.getElementById("positivo").style.display = "none"
-// document.getElementById("negativo").style.display = "none"
-// }
-                    
+btnInicio.onclick = funcInicio
+btnGraph.onclick = funcGraphics
+btnPagar.onclick = funcPagar
+btnReceber.onclick = funcReceber

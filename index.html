@@ -10,14 +10,14 @@
     <div id="overlay" onclick="off()"></div>
     <div id="mySideBar">
         <h3>Menu</h3>
-        <a onclick="inicio()" class="option-side">Inicio</a>
-        <a class="option-side" onclick="graphics()">Gráfico</a>
-        <a class="option-side">Pagar</a>
-        <a class="option-side">Receber</a>
+        <a class="option-side" id="inicio">Inicio</a>
+        <a class="option-side" id="btn-graph">Gráfico</a>
+        <a class="option-side" id="btn-pagar">Pagar</a>
+        <a class="option-side"  id="btn-receber">Receber</a>
     </div>
     <header class="navbar nav-align"> 
             <a class="sidebar" id="side-button" onclick="sideButton_open()">☰</a>
-            <h2>10,63$</h2>
+            <h2>10,65$</h2>
     </header>
     <div class="sub-header" id="paymants">
         <a class="item" id="todos" data-id="todos">Todos</a>
@@ -28,6 +28,16 @@
         <a class="item" id="graph1" data-id="graph1">Graph 1</a>
         <a class="item" id="graph2" data-id="graph2">Graph 2</a>
         <a class="item" id="graph3" data-id="graph3">Graph 3</a>
+    </div>
+    <div class="sub-header-pagar" id="sub-header-pagar">
+        <a class="item" id="pagar" data-id="pagar">Pagar</a>
+        <a class="item" id="agendar-pagamento" data-id="agendar-pagamento">Agendar</a>
+        <a class="item" id="simulacao" data-id="simulacao">Simulação</a>
+    </div>
+    <div class="sub-header-receber" id="sub-header-receber">
+        <a class="item" id="receber" data-id="receber">Receber</a>
+        <a class="item" id="agendar-receber" data-id="agendar-receber">Agendar</a>
+        <a class="item" id="simulacao-receber" data-id="simulacao-receber">Simulação</a>
     </div>
     <!-- corpo -->
     <div class="container">
@@ -118,8 +128,8 @@
             
     </div>
 
-    <script src="src\app.js"></script>
+
     <script src="src\js\side-bar.js"></script>
-    <script src="src\js\sub-side.js"></script>
+    <script type="module" src="src\js\sub-side.js"></script>
 </body>
 </html>
